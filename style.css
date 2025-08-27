@@ -11,7 +11,7 @@ body {
 #farm {
   display: flex;
   gap: 10px;
-  margin-botton: 20px;
+  margin-bottom: 20px;
 }
 
 .plot {
