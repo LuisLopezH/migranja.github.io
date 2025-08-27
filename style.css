@@ -1,0 +1,18 @@
+body {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.plot {
+  width: 100px;
+  height: 100px;
+  background: #7c4c1f;
+  border: 2px solid #5a3515;
+  border-radius: 8px;
+  margin-top: 20px;
+}
