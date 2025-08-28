@@ -4,23 +4,60 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   font-family: Arial, sans-serif;
+  gap: 20px;
+  position: relative;
 }
 
-#farm {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+#money {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.farm-row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100px;
+  gap: 10px;         
+  justify-content: center;
+  margin-bottom: 10px; 
 }
 
 .plot {
   width: 100px;
   height: 100px;
-  background: #7c4c1f;
+  background-color: #a16f4c; /* tierra clara sin arar */
   border: 2px solid #5a3515;
   border-radius: 8px;
-  margin-top: 20px;
+  cursor: pointer; /* indica que se puede hacer click */
+  transition: background 0.3s; /* transición suave */
+}
+
+.plot.arada {
+  background-color: #a16f4c; /* tierra clara */
+  border: 2px solid #5a3515;
+  border-radius: 8px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  /* 4 surcos equidistantes cada 25% */
+  background-image: linear-gradient(
+    to right,
+    #a16f4c 0%, #a16f4c 23%,
+    #7c4c1f 23%, #7c4c1f 28%,
+    
+    #a16f4c 28%, #a16f4c 48%,
+    #7c4c1f 48%, #7c4c1f 53%,
+    
+    #a16f4c 53%, #a16f4c 73%,
+    #7c4c1f 73%, #7c4c1f 78%,
+    
+    #a16f4c 78%, #a16f4c 100%
+  );
 }
 
 button {
